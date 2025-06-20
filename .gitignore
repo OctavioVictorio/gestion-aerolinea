@@ -1,0 +1,25 @@
+# Entorno virtual
+.enviroment/
+
+# Archivos compilados y temporales
+__pycache__/
+*.py[cod]
+*.log
+
+# Archivos específicos de Django
+db.sqlite3
+/static/
+media/
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Archivos de test
+.pytest_cache/
+htmlcov/
+coverage.xml
+
+# Archivos de dependencias
+Pipfile.lock
+poetry.lock
