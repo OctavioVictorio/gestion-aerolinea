@@ -18,3 +18,19 @@ class Reserva(models.Model):
 
     def __str__(self):
         return f"Reserva {self.codigo_reserva} - {self.pasajero} en vuelo {self.vuelo}"
+
+
+class Boleto(models.Model):
+    Estado = [
+        ('pendiente', 'Pendiente'),
+        ('confirmada', 'Confirmada'),
+        ('cancelada', 'Cancelada'),
+    ]
+
+    reserva = models.OneToOneField('reservas.Reserva', on_delete=models.CASCADE)
+    codigo_barra = models.CharField(max_length=20, unique=True)
+    fecha_emision = models.DateTimeField(auto_now_add=True)
+    estado = models.CharField(max_length=20, choices=Estado)
+
+    def __str__(self):
+        return f"Boleto {self.codigo_barra} - {self.reserva}"
