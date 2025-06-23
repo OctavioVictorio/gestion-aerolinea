@@ -40,11 +40,12 @@ INSTALLED_APPS = [
 
     #apps agregadas
     'flota',
-    'vuelos',
+    'home',
+    'pasajeros',
+    'reportes',
     'reservas',
     'usuarios',
-    'reportes',
-    'pasajeros',
+    'vuelos',
 ]
 
 MIDDLEWARE = [
